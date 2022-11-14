@@ -1,0 +1,3 @@
+[submodule "potInterpreter"]
+	path = potInterpreter
+	url = git@github.com:schrer/potInterpreter.git
