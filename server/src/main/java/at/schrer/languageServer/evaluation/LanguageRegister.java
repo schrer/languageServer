@@ -1,6 +1,7 @@
-package at.schrer.languageServer.languages;
+package at.schrer.languageServer.evaluation;
 
-import at.schrer.languageServer.languages.annotations.Evaluator;
+import at.schrer.languageServer.evaluation.util.Evaluator;
+import at.schrer.languageServer.evaluation.language.ExpressionEvaluator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.AnnotatedBeanDefinition;
@@ -29,7 +30,7 @@ public class LanguageRegister {
         final ClassPathScanningCandidateComponentProvider provider = new ClassPathScanningCandidateComponentProvider(false);
         provider.addIncludeFilter(new AnnotationTypeFilter(Evaluator.class));
 
-        final Set<AnnotatedBeanDefinition> beanDefinitions = provider.findCandidateComponents("at.schrer.languageServer.languages")
+        final Set<AnnotatedBeanDefinition> beanDefinitions = provider.findCandidateComponents("at.schrer.languageServer.evaluation.language")
                 .stream()
                 .filter(bd -> bd instanceof AnnotatedBeanDefinition)
                 .map(bd -> (AnnotatedBeanDefinition) bd).collect(Collectors.toSet());

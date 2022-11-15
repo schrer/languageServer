@@ -1,4 +1,4 @@
-package at.schrer.languageServer.languages.math;
+package at.schrer.languageServer.evaluation.language.math;
 
 import com.ezylang.evalex.EvaluationException;
 import com.ezylang.evalex.Expression;

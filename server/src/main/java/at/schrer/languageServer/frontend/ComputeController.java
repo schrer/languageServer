@@ -2,7 +2,7 @@ package at.schrer.languageServer.frontend;
 
 import at.schrer.languageServer.frontend.request.ComputeRequest;
 import at.schrer.languageServer.frontend.response.ComputeResponse;
-import at.schrer.languageServer.languages.LanguageRegister;
+import at.schrer.languageServer.evaluation.LanguageRegister;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

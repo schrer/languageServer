@@ -1,12 +1,12 @@
-package at.schrer.languageServer.languages.math;
+package at.schrer.languageServer.evaluation.language.math;
 
-import at.schrer.languageServer.languages.ExpressionEvaluator;
-import at.schrer.languageServer.languages.annotations.Evaluator;
+import at.schrer.languageServer.evaluation.language.ExpressionEvaluator;
+import at.schrer.languageServer.evaluation.util.Evaluator;
 
 import java.math.BigDecimal;
 
 @Evaluator(name="mathToInteger", sourceLang = "math", targetLang = "integer")
-public class MathToInteger implements ExpressionEvaluator {
+public class MathToInteger extends ExpressionEvaluator {
 
     @Override
     public String evaluate(String program) {
