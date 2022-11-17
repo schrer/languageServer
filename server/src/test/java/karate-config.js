@@ -6,7 +6,7 @@ function fn() {
     }
     var config = { // base config JSON
         appId: 'at.schrer.languageserver',
-        baseUrl: 'https://localhost:8080/api/',
+        baseUrl: 'http://localhost:8080/api',
     };
 
     // don't waste time waiting for a connection or if servers don't respond within 5 seconds
