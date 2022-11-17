@@ -33,8 +33,21 @@ dependencies {
 	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.restdocs:spring-restdocs-mockmvc'
-	// testImplementation 'com.intuit.karate:karate-apache'
-	// testImplementation 'com.intuit.karate:karate-junit5'
+	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+	testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+	testImplementation 'com.intuit.karate:karate-apache'
+	testImplementation 'com.intuit.karate:karate-junit5'
+}
+
+// This is required to place Karate's .feature files together
+// with .java test classes
+sourceSets {
+	test {
+		resources {
+			srcDir file('src/test/java')
+			exclude '**/*.java'
+		}
+	}
 }
 
 tasks.named('test') {
