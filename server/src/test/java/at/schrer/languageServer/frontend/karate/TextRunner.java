@@ -6,11 +6,11 @@ public class TextRunner {
 
     @Karate.Test
     Karate testLZW(){
-        return null;
+        return Karate.run("classpath:at/schrer/languageServer/frontend/karate/text/text-to-text-lzw.feature");
     }
 
     @Karate.Test
     Karate testIdentity(){
-        return null;
+        return Karate.run("classpath:at/schrer/languageServer/frontend/karate/text/text-to-text-identity.feature");
     }
 }
