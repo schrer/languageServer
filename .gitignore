@@ -35,3 +35,6 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### Karate ###
+server/target/karate-reports/
